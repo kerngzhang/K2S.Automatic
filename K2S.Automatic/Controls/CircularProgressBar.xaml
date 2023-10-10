@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="K2S.Automatic.Controls.CircularProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:K2S.Automatic.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="80">
+    <Grid x:Name="LayoutRoot" Height="{Binding RelativeSource={RelativeSource Self},Path=ActualWidth}">
+        <Ellipse Width="{Binding ElementName=LayoutRoot,Path=ActualWidth}"   
+                  Height="{Binding ElementName=LayoutRoot,Path=ActualWidth}" 
+                  StrokeThickness="8"
+                  Stroke="#22ffffff"/>
+        <Path x:Name="path" Stroke="Orange" StrokeThickness="7" StrokeStartLineCap="Round" StrokeEndLineCap="Round"/>
+        <TextBlock  HorizontalAlignment="Center" Foreground="White"
+                   VerticalAlignment="Center">
+            <Run Text="{Binding Value,RelativeSource={RelativeSource AncestorType=UserControl},StringFormat={}{0:F1}}"
+                 FontSize="22" />
+            <Run Text="%"/>
+        </TextBlock>
+    </Grid>
+</UserControl>

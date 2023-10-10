@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K2S.Automatic", "K2S.Automatic\K2S.Automatic.csproj", "{BF101337-CB12-418A-9B44-F47CC879A171}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF101337-CB12-418A-9B44-F47CC879A171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF101337-CB12-418A-9B44-F47CC879A171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF101337-CB12-418A-9B44-F47CC879A171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF101337-CB12-418A-9B44-F47CC879A171}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C606FE7-DC86-443B-9339-65E54E67A01A}
+	EndGlobalSection
+EndGlobal

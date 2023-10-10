@@ -1,0 +1,101 @@
+﻿<Window x:Class="K2S.Automatic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:K2S.Automatic"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Microsoft Yahei" FontSize="12" FontWeight="ExtraLight"
+        Background="Transparent" Name="window"
+        Title="K2S生产管理平台 - XXXX有限公司" Height="700" Width="1150">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1"/>
+    </WindowChrome.WindowChrome>
+    
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF285173" Offset="0"/>
+                <GradientStop Color="#FF244967" Offset="0.3"/>
+                <GradientStop Color="#FF14273A" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--头部标题部分-->
+        <Border BorderBrush="#5518aabd" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/images/app.png" Margin="10,7"/>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title,ElementName=window}" FontSize="16" Foreground="White"/>
+                    <TextBlock Text="K2S SOFT 专注于制造业效率可视化" Foreground="LightGray" FontSize="9" Margin="0,2,0,0"/>
+                </StackPanel>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="13"/>
+                    </Grid.RowDefinitions>
+                    <Border HorizontalAlignment="Right" WindowChrome.IsHitTestVisibleInChrome="True"
+                            Background="Transparent" Width="200">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button  Style="{StaticResource ControlButtonStyle}" Content="&#xe624;"/>
+                            <Button Style="{StaticResource ControlButtonStyle}" Content="&#xe600;"/>
+                            <Button  Style="{StaticResource ControlButtonStyle}" Content="&#xe609;" Background="DarkRed" x:Name="btnClose"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Row="1" BorderBrush="#5518AABD" BorderThickness="0,1,0,0"/>
+                    <Border Grid.Row="1" Margin="0,3,0,2">
+                        <Border.Background>
+                            <!--TileMode="Tile" Viewport="0,0,7 7" ViewportUnits="Absolute"用于线的排列-->
+                            <VisualBrush TileMode="Tile" Viewport="0,0,7 7" ViewportUnits="Absolute">
+                                <VisualBrush.Visual>
+                                    <Grid Width="20" Height="20">
+                                        <Line X1="0" Y1="10" X2="10" Y2=" 0" Stroke="Gray" StrokeThickness="1"/>
+                                    </Grid>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                    
+            </Grid>
+        </Border>
+        
+        <!--内容部分-->
+        <ContentControl Grid.Row="1" Content="{Binding PageContent}"/>
+        
+        <!--状态栏部份-->
+        <Border Grid.Row="2" BorderBrush="#5518aabd" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Margin="0,5">
+                    <Border.Background>
+                        <!--TileMode="Tile" Viewport="0,0,7 7" ViewportUnits="Absolute"用于线的排列-->
+                        <VisualBrush TileMode="Tile" Viewport="0,0,7 7" ViewportUnits="Absolute">
+                            <VisualBrush.Visual>
+                                <Grid Width="20" Height="20">
+                                    <Line X1="0" Y1="10" X2="10" Y2=" 0" Stroke="Gray" StrokeThickness="1"/>
+                                </Grid>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.Background>
+                </Border>
+                <TextBlock Grid.Column="1" Text="2022 ©  Kerng Zhang; Email:Kerng.zhang@outlook.com" Foreground="DarkRed" VerticalAlignment="Center" FontWeight="Bold" FontSize="11" Margin="10,1"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
